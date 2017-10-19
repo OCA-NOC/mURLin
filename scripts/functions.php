@@ -75,8 +75,8 @@ function mURLin_AddDBColumnIfNotExist($tablename, $columndata) {
 function mURLin_TableExist($tablename) {
     global $database_default;
 
-    sql_sanitize($tablename);
-
+    //sql_sanitize($tablename);
+    stripslashes($tablename);
 
     $sql = "SELECT * FROM information_schema.COLUMNS
         WHERE TABLE_SCHEMA='$database_default'
@@ -94,8 +94,10 @@ function mURLin_TableExist($tablename) {
 function mURLin_ColumnExist($tablename, $columname) {
     global $database_default;
 
-    sql_sanitize($tablename);
-    sql_sanitize($columname);
+    //sql_sanitize($tablename);
+    //sql_sanitize($columname);
+    stripslashes($tablename);
+    stripslashes($columname);
 
     $sql = "SELECT * FROM information_schema.COLUMNS
         WHERE TABLE_SCHEMA='$database_default'

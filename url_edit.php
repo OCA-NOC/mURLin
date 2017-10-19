@@ -74,13 +74,19 @@ function SaveHost()
         input_validate_input_number($indexid);
     }
     
-    $proxyaddress = sql_sanitize($proxyaddress);
-    $proxyusername = sql_sanitize($proxyusername);
-    $proxypassword = sql_sanitize($proxypassword);
+    //$proxyaddress = sql_sanitize($proxyaddress);
+    //$proxyusername = sql_sanitize($proxyusername);
+    //$proxypassword = sql_sanitize($proxypassword);
+    $proxyaddress = stripslashes($proxyaddress);
+    $proxyusername = stripslashes($proxyusername);
+    $proxypassword = stripslashes($proxypassword);
     
-    $url = sql_sanitize($url);
-    $text_match = sql_sanitize($text_match);
-       
+    //$url = sql_sanitize($url);
+    //$text_match = sql_sanitize($text_match);
+    $url = stripslashes($url);
+    $text_match = stripslashes($text_match);       
+
+
     // Check if its a number
     input_validate_input_number($selected_host);
     input_validate_input_number($timeout);
