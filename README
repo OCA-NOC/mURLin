@@ -1,13 +1,14 @@
 mURLin
 ------
-
+This is a forked copy of the mURLin plugin for Cacti, with the intention to make it work with Cacti 1.x
 
 
 Cacti URL Monitoring Plugin
 
 Planned Features
 ----------------
-
+Make it functional
 
 Alpha Release Log
 -----------------
+0.2.4 - Previous release by jamoflaw.
