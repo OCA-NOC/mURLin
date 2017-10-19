@@ -42,7 +42,8 @@ function plugin_mURLin_install()
     plugin_mURLin_check_hooks();
 	
     mURLin_setup_tables();
-    import_xml_data(mURLin_returnXML(), true);
+    $mURLin_returnXML =  mURLin_returnXML();
+    import_xml_data($mURLin_returnXML, true);
 }
 
 function plugin_mURLin_uninstall()
@@ -73,7 +74,8 @@ function plugin_mURLin_check_upgrade()
         
         // We need to do install
         mURLin_setup_tables();
-        import_xml_data(mURLin_returnXML(), true);
+	$mURLin_returnXML =  mURLin_returnXML();
+        import_xml_data($mURLin_returnXML, true);
         
         plugin_mURLin_check_hooks();
         
